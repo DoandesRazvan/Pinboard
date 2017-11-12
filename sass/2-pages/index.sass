@@ -1,0 +1,197 @@
+@import '../0-utilities/_reset.sass'
+@import '../0-utilities/_variables.sass'
+
+body
+  position: relative
+  overflow-x: hidden
+
+.logo
+  color: $white
+
+  p
+    display: inline
+    margin-left: 5px
+
+    font:
+      family: $segoe
+      size: 40px
+    
+    text-transform: uppercase
+
+#cover
+  position: absolute
+  width: 100%
+  height: 60vh
+  background: $faded-red
+
+  transform: skewY(-16deg)
+	  origin: 0
+  z-index: -1
+
+  .logo
+    margin: 10px 0 0 10px
+
+    transform: skewY(16deg)
+      origin: 0
+
+#cover-content
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  height: 100vh
+  text-align: center
+  
+  #laptop-mockup
+    width: 900px
+
+  hr
+    margin-top: 20px
+    width: 400px
+
+    border: 0.5px solid $faded-red
+
+  #cover-lead
+    margin-top: 20px
+    padding: 0 5px
+
+    font:
+      family: $segoe
+      weight: 400
+      size: 28px
+    color: $red
+
+  a
+    margin-top: 60px
+    padding: 10px 50px
+    background: $red
+
+    font:
+      family: $firasans
+      size: 18px
+    text-decoration: none
+    color: $white
+
+    border-radius: 20px
+
+    transition: all 0.15s ease-in-out
+
+    &:hover
+      background: darken($red, 10%)
+
+#features
+  .feature
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    height: 450px
+
+    i
+      color: $red
+
+    .feature-lead
+      margin-top: 20px
+
+      font:
+        family: $segoe
+        weight: 400
+        size: 40px
+      color: #555
+
+    .feature-description
+      display: inline-block
+      margin: 20px 0 0 0
+      padding: 0 20px
+      max-width: 1400px
+
+      font:
+        family: $firasans
+        size: 16px
+      color: #999
+      text:
+        align: justify
+        indent: 15px
+
+  .feature:nth-child(2)
+    background: #F6F9FC
+
+#categories
+  display: flex
+  align-items: center
+  flex-direction: column
+  padding: 20px
+  background: $faded-red
+
+  #categories-lead
+    font:
+      family: $segoe
+      weight: 400
+      size: 35px
+    color: $white
+
+  #categories-list
+    display: flex
+    margin-top: 20px
+    width: 1400px
+    height: 300px
+
+    .column
+      display: flex
+      align-items: center
+      justify-content: space-around
+      flex-direction: column
+      flex: 1
+      height: 300px
+
+      a
+        font:
+          family: $firasans
+          size: 18px
+        color: darken($white, 5%)
+        text-decoration: none
+
+        transition: all 0.3s ease-in
+
+        &:hover
+          color: $white
+
+footer
+  padding: 40px
+  background: #333
+
+  text-align: center
+
+  hr
+    margin: 0 auto
+    width: 400px
+
+    border: 0.5px solid #95989A
+
+  .logo
+    margin: 40px 10px 0 0
+    padding: 0 10px
+    display: inline-block
+
+    border-right: 0.5px solid darken($white, 60%)
+
+  a
+    text-decoration: none
+    color: darken($white, 10%)
+
+    transition: all 0.15s ease-in-out
+
+    &:hover
+      color: $white
+
+@media (max-width: 1270px)
+  #categories #categories-list .column:first-child
+    display: none
+
+@media (max-width: 1200px)
+  #cover-content #laptop-mockup
+    width: 600px
+
+@media (max-width: 950px)
+  #categories #categories-list .column:last-child
+    display: none
