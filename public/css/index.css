@@ -50,17 +50,17 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center; }
   #cover-content #laptop-mockup {
-    width: 900px; }
+    width: 60%; }
   #cover-content hr {
     margin-top: 20px;
     width: 400px;
     border: 0.5px solid #EF5D60; }
   #cover-content #cover-lead {
     margin-top: 20px;
-    padding: 0 5px;
+    padding: 0 10px;
     font-family: Segoe UI, sans-serif;
     font-weight: 400;
     font-size: 28px;
@@ -93,7 +93,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 450px; }
+  padding: 80px 20px; }
   #features .feature i {
     color: #EC4067; }
   #features .feature .feature-lead {
@@ -101,14 +101,14 @@ body {
     font-family: Segoe UI, sans-serif;
     font-weight: 400;
     font-size: 40px;
+    text-align: center;
     color: #555; }
   #features .feature .feature-description {
     display: inline-block;
     margin: 20px 0 0 0;
-    padding: 0 20px;
     max-width: 1400px;
     font-family: "Fira Sans", sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     color: #999;
     text-align: justify;
     text-indent: 15px; }
@@ -133,32 +133,27 @@ body {
     font-family: Segoe UI, sans-serif;
     font-weight: 400;
     font-size: 35px;
-    color: #f2f3f4; }
+    color: #f2f3f4;
+    text-align: center; }
   #categories #categories-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 20px;
-    width: 1400px;
-    height: 300px; }
+    margin-top: 20px; }
     #categories #categories-list .column {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
       -ms-flex-pack: distribute;
       justify-content: space-around;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
-      -webkit-box-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
+      width: 450px;
       height: 300px; }
       #categories #categories-list .column a {
+        margin: 0 auto;
         font-family: "Fira Sans", sans-serif;
         font-size: 18px;
         color: #e4e6e8;
@@ -169,11 +164,25 @@ body {
           color: #f2f3f4; }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
   padding: 40px;
-  background: #333;
-  text-align: center; }
+  background: #333; }
   footer hr {
-    margin: 0 auto;
+    display: inline;
+    margin: 0;
     width: 400px;
     border: 0.5px solid #95989A; }
   footer .logo {
@@ -189,14 +198,41 @@ footer {
     footer a:hover {
       color: #f2f3f4; }
 
-@media (max-width: 1270px) {
+@media (max-width: 1411px) {
   #categories #categories-list .column:first-child {
-    display: none; } }
-
-@media (max-width: 1200px) {
+    display: none; }
   #cover-content #laptop-mockup {
-    width: 600px; } }
+    margin-top: 100px; }
+  #cover-content #cover-lead {
+    margin-top: 100px; }
+  #cover-content a {
+    margin-top: 80px; } }
 
-@media (max-width: 950px) {
+@media (max-width: 958px) {
   #categories #categories-list .column:last-child {
-    display: none; } }
+    display: none; }
+  footer hr {
+    width: 250px; } }
+
+@media (max-width: 805px) {
+  #cover {
+    height: 70vh; }
+  #cover-content {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+    #cover-content #laptop-mockup, #cover-content hr {
+      display: none; }
+    #cover-content #cover-lead {
+      text-align: left;
+      color: #f2f3f4; }
+    #cover-content a {
+      margin: auto 0 80px 0; } }
+
+@media only screen and (max-width: 805px) and (orientation: landscape) {
+  #cover {
+    height: 90vh; }
+  #cover-content #cover-lead {
+    font-size: 18px; }
+  #cover-content a {
+    margin-top: 120px; } }

@@ -39,11 +39,11 @@ body
   align-items: center
   justify-content: center
   flex-direction: column
-  height: 100vh
+  min-height: 100vh
   text-align: center
   
   #laptop-mockup
-    width: 900px
+    width: 60%
 
   hr
     margin-top: 20px
@@ -53,7 +53,7 @@ body
 
   #cover-lead
     margin-top: 20px
-    padding: 0 5px
+    padding: 0 10px
 
     font:
       family: $segoe
@@ -85,7 +85,7 @@ body
     align-items: center
     justify-content: center
     flex-direction: column
-    height: 450px
+    padding: 80px 20px
 
     i
       color: $red
@@ -97,17 +97,17 @@ body
         family: $segoe
         weight: 400
         size: 40px
+      text-align: center
       color: #555
 
     .feature-description
       display: inline-block
       margin: 20px 0 0 0
-      padding: 0 20px
       max-width: 1400px
 
       font:
         family: $firasans
-        size: 16px
+        size: 18px
       color: #999
       text:
         align: justify
@@ -129,22 +129,22 @@ body
       weight: 400
       size: 35px
     color: $white
+    text-align: center
 
   #categories-list
     display: flex
     margin-top: 20px
-    width: 1400px
-    height: 300px
 
     .column
       display: flex
-      align-items: center
       justify-content: space-around
       flex-direction: column
-      flex: 1
+      width: 450px
       height: 300px
 
       a
+        margin: 0 auto
+
         font:
           family: $firasans
           size: 18px
@@ -157,13 +157,17 @@ body
           color: $white
 
 footer
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  width: 100%
   padding: 40px
   background: #333
 
-  text-align: center
-
   hr
-    margin: 0 auto
+    display: inline 
+    margin: 0
     width: 400px
 
     border: 0.5px solid #95989A
@@ -184,14 +188,52 @@ footer
     &:hover
       color: $white
 
-@media (max-width: 1270px)
+@media (max-width: 1411px)
   #categories #categories-list .column:first-child
     display: none
 
-@media (max-width: 1200px)
-  #cover-content #laptop-mockup
-    width: 600px
+  #cover-content
+    #laptop-mockup
+      margin-top: 100px
+      
+    #cover-lead
+      margin-top: 100px
 
-@media (max-width: 950px)
+    a
+      margin-top: 80px
+    
+@media (max-width: 958px)
   #categories #categories-list .column:last-child
     display: none
+  
+  footer
+    hr
+      width: 250px
+
+@media (max-width: 805px)
+  #cover
+    height: 70vh
+
+  #cover-content
+    justify-content: flex-start
+
+    #laptop-mockup, hr
+      display: none
+
+    #cover-lead
+      text-align: left
+      color: $white
+
+    a
+      margin: auto 0 80px 0
+
+@media only screen and (max-width: 805px) and (orientation: landscape)
+  #cover
+    height: 90vh
+
+  #cover-content
+    #cover-lead
+      font-size: 18px
+
+    a
+      margin-top: 120px
